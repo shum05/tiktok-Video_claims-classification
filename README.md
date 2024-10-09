@@ -38,8 +38,7 @@ Model performance is visualized using confusion matrices, recall scores, and oth
 Prerequisites
 To run the project, the following libraries are required:
 
-bash
-
+```python
 pip install pandas numpy matplotlib seaborn scikit-learn xgboost
 ### Dataset
 The dataset is automatically loaded in the notebook. However, ensure that the file tiktok_dataset.csv is available for manual runs if needed.
@@ -85,6 +84,8 @@ y_pred_xgb = xgb.predict(X_test)
 bash
 print(classification_report(y_test, y_pred_rf))
 print(classification_report(y_test, y_pred_xgb))
+```
+
 **Evaluation Results**
 The random forest model achieved an impressive recall score of 0.995 during cross-validation, making it highly effective in minimizing false negatives.
 
