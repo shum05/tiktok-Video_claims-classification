@@ -55,33 +55,34 @@ XGBoost
 **Model Evaluation:** Evaluate both models on recall and other metrics.
 **Next Steps:** Use the best model for classifying videos in production and fine-tune as needed.
 Example: Model Building and Evaluation
-python
 
+
+bash
 # Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import classification_report, recall_score
-
+bash
 # Load dataset
 data = pd.read_csv('tiktok_dataset.csv')
-
+bash
 # Preprocess data and tokenization
 # ...
 
 # Random Forest Model
 rf = RandomForestClassifier(random_state=0)
 rf.fit(X_train, y_train)
-
+bash
 # XGBoost Model
 xgb = XGBClassifier(objective='binary:logistic', random_state=0)
 xgb.fit(X_train, y_train)
-
+bash
 # Model Evaluation
 y_pred_rf = rf.predict(X_test)
 y_pred_xgb = xgb.predict(X_test)
-
+bash
 print(classification_report(y_test, y_pred_rf))
 print(classification_report(y_test, y_pred_xgb))
 **Evaluation Results**
