@@ -40,6 +40,7 @@ To run the project, the following libraries are required:
 
 ```python
 pip install pandas numpy matplotlib seaborn scikit-learn xgboost
+```
 ### Dataset
 The dataset is automatically loaded in the notebook. However, ensure that the file tiktok_dataset.csv is available for manual runs if needed.
 
@@ -56,17 +57,18 @@ XGBoost
 Example: Model Building and Evaluation
 
 
-bash
+```python
 # Import necessary libraries
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import classification_report, recall_score
-bash
+```
 # Load dataset
+```python
 data = pd.read_csv('tiktok_dataset.csv')
-bash
+```
 # Preprocess data and tokenization
 # ...
 
